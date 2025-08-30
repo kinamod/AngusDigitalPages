@@ -189,12 +189,12 @@ export default function Index() {
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6">
             <span
-              className="bg-gradient-to-r from-red-600 via-yellow-400 to-green-500 bg-clip-text text-transparent"
               style={{
-                WebkitTextStroke: '2px black',
-                textStroke: '2px black',
-                WebkitTextFillColor: 'transparent',
-                fontFamily: 'Advent Pro, sans-serif'
+                WebkitTextStroke: '0.25px white',
+                textStroke: '0.25px white',
+                WebkitTextFillColor: 'black',
+                color: 'black',
+                fontFamily: 'Xirod, sans-serif'
               }}
             >
               Angus Digital
@@ -210,7 +210,7 @@ export default function Index() {
             with modern digital production techniques
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-red-600 via-yellow-400 to-green-500 hover:opacity-90 text-lg px-8 py-6" asChild>
+            <Button size="lg" className="bg-gradient-to-r from-red-600 via-yellow-400 to-green-500 hover:opacity-90 text-lg px-8 py-6 text-black font-semibold" asChild>
               <Link to="/music">
                 <Play className="w-5 h-5 mr-2" />
                 Listen Now
@@ -238,20 +238,24 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">About Angus Digital</h2>
+              <h2 className="text-4xl font-bold mb-6"><p>Angus Digital - The Dub Alchemist</p></h2>
               <div className="space-y-4 text-muted-foreground text-lg">
+                <p></p>
                 <p>
-                  Based in Belgium, Angus Digital has been creating music that pushes
-                  the boundaries between dub and electronic soundscapes since 2019.
+                  From childhood days listening to reggae records on his
+                  father's Bluespot to being inspired by the legendary
+                  dub pioneers, Angus Digital has always lived and
+                  breathed music. His love for deep bass, echo, and
+                  experimentation led him to the studio, where he began
+                  crafting his own dubs. First championed by sound
+                  systems like King Earthquake and Jah Voice among many
+                  others, Angus has grown into The Dub Alchemist —
+                  creating powerful, atmospheric dub music that
+                  continues the tradition while pushing it into new
+                  dimensions.
                 </p>
                 <p>
-                  With influences ranging from reggae legends to modern producers, Angus Digital's music explores
-                  themes of social consciousness, unity, and the vibrational power of dub frequencies.
-                </p>
-                <p>
-                  The latest album "Neon Dreams" has garnered critical acclaim for its
-                  innovative dub production and conscious messaging, featuring collaborations with
-                  reggae artists from around the globe.
+                  <br />
                 </p>
               </div>
               <div className="mt-8">
@@ -432,7 +436,7 @@ export default function Index() {
             Get notified about new releases, tour dates, and exclusive content
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-red-600 via-yellow-400 to-green-500 hover:opacity-90" asChild>
+            <Button size="lg" className="bg-gradient-to-r from-red-600 via-yellow-400 to-green-500 hover:opacity-90 text-black font-semibold" asChild>
               <Link to="/contact">Join Mailing List</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>

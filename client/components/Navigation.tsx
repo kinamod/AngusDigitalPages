@@ -11,6 +11,7 @@ export default function Navigation() {
 
   const navItems = [
     { href: "/", label: "Home" },
+    { href: "/bio", label: "Bio" },
     { href: "/tour", label: "Tour" },
     { href: "/music", label: "Music" },
     { href: "/store", label: "Store" },

@@ -34,6 +34,7 @@ export default function Layout({ children }: LayoutProps) {
               <h3 className="font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li><a href="/" className="hover:text-primary transition-colors">Home</a></li>
+                <li><a href="/bio" className="hover:text-primary transition-colors">Bio</a></li>
                 <li><a href="/music" className="hover:text-primary transition-colors">Music</a></li>
                 <li><a href="/shows" className="hover:text-primary transition-colors">Shows</a></li>
                 <li><a href="/contact" className="hover:text-primary transition-colors">Contact</a></li>

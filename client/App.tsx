@@ -11,6 +11,7 @@ import Music from "./pages/Music";
 import Tour from "./pages/Tour";
 import Shows from "./pages/Shows";
 import Contact from "./pages/Contact";
+import Bio from "./pages/Bio";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/bio" element={<Bio />} />
           <Route path="/music" element={<Music />} />
           <Route path="/tour" element={<Tour />} />
           <Route path="/shows" element={<Shows />} />
