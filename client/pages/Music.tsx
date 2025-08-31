@@ -38,35 +38,21 @@ export default function Music() {
             <Card className="max-w-4xl mx-auto">
               <CardContent>
                 <div className="w-full">
-                  <iframe
-                    src="https://audius.co/embed/track/rzP9NPZ?flavor=compact"
-                    width="100%"
-                    height="120"
-                    allow="encrypted-media"
-                    style={{ border: 'none' }}
-                    frameBorder="0"
-                  ></iframe>
+              
+                  <iframe 
+                    src="https://audius.co/embed/playlist/XOqJPvy?flavor=card" 
+                    width="100%" 
+                    height="700" 
+                    allow="encrypted-media" 
+                    style={{border: 'none'}}
+                    >
+
+                  </iframe>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          <div className="mb-12">
-            <Card className="max-w-4xl mx-auto">
-              <CardContent>
-                <div className="w-full">
-                  <iframe
-                    src="https://audius.co/embed/track/NzmOWE7?flavor=compact"
-                    width="100%"
-                    height="120"
-                    allow="encrypted-media"
-                    style={{ border: 'none' }}
-                    frameBorder="0"
-                  ></iframe>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
 
         </div>
       </div>
