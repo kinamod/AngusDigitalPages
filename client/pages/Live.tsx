@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, MapPin, ExternalLink, Clock } from "lucide-react";
 
-export default function Tour() {
+export default function Live() {
   const upcomingShows = [
     {
       id: "featured",
@@ -70,14 +70,11 @@ export default function Tour() {
                       <div className="text-primary font-bold text-xl mb-2">
                         Saturday, September 27, 2025
                       </div>
-                      <h3 className="text-3xl font-bold mb-2">BUSSOLINO</h3>
+                      <h3 className="text-3xl font-bold mb-2"><p>Rootsrev Soundsystem</p></h3>
                       <div className="text-xl font-semibold mb-2">Festa Campestre</div>
                       <div className="flex items-center text-muted-foreground mb-2">
                         <MapPin className="w-5 h-5 mr-2" />
                         Vidulis, UD, Italy
-                      </div>
-                      <div className="text-lg text-muted-foreground mb-2">
-                        Presented by ROOTSREV SOUNDSYSTEM
                       </div>
                       <div className="text-lg text-muted-foreground mb-4">
                         <span className="font-semibold">Featuring:</span><br />
@@ -88,16 +85,6 @@ export default function Tour() {
                         <span className="px-3 py-2 rounded-full text-sm font-medium bg-accent/20 text-accent">
                           For the First Time to the World
                         </span>
-                      </div>
-                      <div className="flex gap-4">
-                        <Button size="lg" className="bg-gradient-to-r from-red-600 via-yellow-400 to-green-500">
-                          <ExternalLink className="w-5 h-5 mr-2" />
-                          Get Tickets
-                        </Button>
-                        <Button size="lg" variant="outline">
-                          <MapPin className="w-5 h-5 mr-2" />
-                          Event Info
-                        </Button>
                       </div>
                     </div>
                   </div>
@@ -133,10 +120,10 @@ export default function Tour() {
                         w/ Macka B & The Roots Ragga Band, Reemshot
                       </div>
                       <div className="flex gap-4">
-                        <Button size="lg" className="bg-gradient-to-r from-red-600 via-yellow-400 to-green-500" asChild>
+                        <Button size="lg" className="bg-gradient-to-r from-red-600 via-yellow-400 to-green-500 text-black" asChild>
                           <a href="https://apps.ticketmatic.com/widgets/hetdepot/flow/feest?event=697505918189&l=en#!/addtickets" target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-5 h-5 mr-2" />
-                            Get Tickets
+                            <div className="text-black">Get Tickets</div>
                           </a>
                         </Button>
                         <Button size="lg" variant="outline" asChild>

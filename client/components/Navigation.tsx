@@ -12,21 +12,25 @@ export default function Navigation() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/bio", label: "Bio" },
-    { href: "/tour", label: "Tour" },
+    { href: "/live", label: "Live" },
     { href: "/music", label: "Music" },
-    { href: "/store", label: "Store" },
-    { href: "/sign-up", label: "Sign up" },
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-black">
+    <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-xl font-bold text-white">
+            <span className="text-xl font-bold text-white" style={{
+                // WebkitTextStroke: '1px white',
+                WebkitTextFillColor: 'white',
+                color: 'black',
+                fontFamily: 'Xirod, sans-serif'
+              }}>
               Angus Digital
             </span>
+            
           </Link>
 
           {/* Desktop Navigation */}
@@ -63,7 +67,7 @@ export default function Navigation() {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/80 backdrop-blur-sm">
             {navItems.map((item) => (
               <Link
                 key={item.href}

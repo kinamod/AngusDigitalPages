@@ -6,11 +6,7 @@ import Layout from "@/components/Layout";
 import { Play, Pause, Calendar, MapPin, ExternalLink, Music, Download, Volume2, VolumeX } from "lucide-react";
 
 export default function Index() {
-  const [currentlyPlaying, setCurrentlyPlaying] = useState<string | null>(null);
-  const [isBackgroundMusicPlaying, setIsBackgroundMusicPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const backgroundMusicRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,139 +20,33 @@ export default function Index() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const songs = [
-    {
-      id: "1",
-      title: "Midnight Drive",
-      album: "Neon Dreams",
-      duration: "3:42",
-      coverArt: "/placeholder.svg",
-      audioSrc: "#",
-    },
-    {
-      id: "2", 
-      title: "Electric Nights",
-      album: "Neon Dreams",
-      duration: "4:15",
-      coverArt: "/placeholder.svg",
-      audioSrc: "#",
-    },
-    {
-      id: "3",
-      title: "City Lights",
-      album: "Urban Echoes",
-      duration: "3:28",
-      coverArt: "/placeholder.svg",
-      audioSrc: "#",
-    },
-  ];
-
   const upcomingShows = [
     {
-      id: "1",
-      date: "2024-02-15",
-      venue: "The Mercury Lounge",
-      city: "New York, NY",
+      id: "featured-bussolino",
+      date: "2025-09-27",
+      venue: "Rootsrev Soundsystem - Festa Campestre",
+      city: "Vidulis, UD, Italy",
       ticketLink: "#",
-      time: "8:00 PM",
+      time: "",
+      event: "Rootsrev Soundsystem",
+      featured: true,
+      description: "Featuring: Angus Digital - The Dub Alchemist, Militant Youths (from Genova)"
     },
     {
-      id: "2",
-      date: "2024-02-22",
-      venue: "Bottom of the Hill",
-      city: "San Francisco, CA", 
-      ticketLink: "#",
-      time: "9:00 PM",
-    },
-    {
-      id: "3",
-      date: "2024-03-01",
-      venue: "Bowery Ballroom",
-      city: "New York, NY",
-      ticketLink: "#",
-      time: "7:30 PM",
+      id: "featured-dub-unit",
+      date: "2025-10-10",
+      venue: "Het Depot & Kingstep",
+      city: "Leuven, Belgium",
+      ticketLink: "https://apps.ticketmatic.com/widgets/hetdepot/flow/feest?event=697505918189&l=en#!/addtickets",
+      time: "",
+      event: "Dub Unit",
+      featured: true,
+      description: "w/ Macka B & The Roots Ragga Band, Reemshot"
     },
   ];
-
-  const albums = [
-    {
-      id: "1",
-      title: "Neon Dreams",
-      year: "2024",
-      coverArt: "/placeholder.svg",
-      description: "Latest album featuring atmospheric dub with reggae elements",
-      streamingLinks: {
-        spotify: "#",
-        apple: "#",
-        bandcamp: "#",
-      },
-    },
-    {
-      id: "2",
-      title: "Urban Echoes",
-      year: "2023",
-      coverArt: "/placeholder.svg",
-      description: "Debut album exploring themes of modern city life",
-      streamingLinks: {
-        spotify: "#",
-        apple: "#", 
-        bandcamp: "#",
-      },
-    },
-  ];
-
-  const togglePlay = (songId: string) => {
-    if (currentlyPlaying === songId) {
-      setCurrentlyPlaying(null);
-    } else {
-      setCurrentlyPlaying(songId);
-    }
-  };
-
-  const toggleBackgroundMusic = () => {
-    setIsBackgroundMusicPlaying(!isBackgroundMusicPlaying);
-  };
-
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
-  };
 
   return (
     <Layout>
-      {/* Background Music Controls */}
-      <div className="fixed bottom-6 right-6 z-50 flex gap-2">
-        <Button
-          size="icon"
-          variant="secondary"
-          onClick={toggleBackgroundMusic}
-          className="bg-black/80 hover:bg-black/90 text-white border border-white/20"
-        >
-          {isBackgroundMusicPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-        </Button>
-        <Button
-          size="icon"
-          variant="secondary"
-          onClick={toggleMute}
-          className="bg-black/80 hover:bg-black/90 text-white border border-white/20"
-        >
-          {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-        </Button>
-      </div>
-
-      {/* Hidden Background Music Player */}
-      {!isMuted && (
-        <div className="fixed -bottom-full opacity-0 pointer-events-none">
-          <iframe
-            ref={backgroundMusicRef}
-            width="100%"
-            height="166"
-            scrolling="no"
-            frameBorder="no"
-            allow="autoplay"
-            src={`https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/kinamod/kinamod-theme&color=%23ff5500&auto_play=${isBackgroundMusicPlaying}&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false`}
-          ></iframe>
-        </div>
-      )}
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -190,8 +80,7 @@ export default function Index() {
           <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6">
             <span
               style={{
-                WebkitTextStroke: '0.25px white',
-                textStroke: '0.25px white',
+                WebkitTextStroke: '1px white',
                 WebkitTextFillColor: 'black',
                 color: 'black',
                 fontFamily: 'Xirod, sans-serif'
@@ -217,7 +106,7 @@ export default function Index() {
               </Link>
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6" asChild>
-              <Link to="/tour">
+              <Link to="/live">
                 <Calendar className="w-5 h-5 mr-2" />
                 View Shows
               </Link>
@@ -335,32 +224,43 @@ export default function Index() {
           
           <div className="space-y-4 mb-12">
             {upcomingShows.map((show) => (
-              <Card key={show.id} className="hover:shadow-lg transition-shadow">
+              <Card key={show.id} className={`hover:shadow-lg transition-shadow ${show.featured ? 'bg-gradient-to-br from-red-600/5 to-green-500/5 border-red-600/20' : ''}`}>
                 <CardContent className="p-6">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div className="flex-1">
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
+                      <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6">
                         <div className="text-primary font-semibold min-w-24">
                           {new Date(show.date).toLocaleDateString('en-US', {
                             month: 'short',
-                            day: 'numeric'
+                            day: 'numeric',
+                            year: 'numeric'
                           })}
                         </div>
-                        <div>
+                        <div className="flex-1">
+                          {show.event && (
+                            <div className="text-lg font-bold text-primary mb-1">{show.event}</div>
+                          )}
                           <h3 className="font-semibold text-lg">{show.venue}</h3>
-                          <div className="flex items-center text-muted-foreground">
+                          <div className="flex items-center text-muted-foreground mb-1">
                             <MapPin className="w-4 h-4 mr-1" />
                             {show.city}
                           </div>
+                          {show.description && (
+                            <p className="text-sm text-muted-foreground mt-2">{show.description}</p>
+                          )}
                         </div>
-                        <div className="text-muted-foreground">
-                          {show.time}
-                        </div>
+                        {show.time && (
+                          <div className="text-muted-foreground">
+                            {show.time}
+                          </div>
+                        )}
                       </div>
                     </div>
-                    <Button className="shrink-0">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Get Tickets
+                    <Button className="shrink-0" asChild>
+                      <a href={show.ticketLink} target={show.ticketLink.startsWith('http') ? '_blank' : undefined} rel={show.ticketLink.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Get Tickets
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
@@ -370,7 +270,7 @@ export default function Index() {
           
           <div className="text-center">
             <Button asChild size="lg" variant="outline">
-              <Link to="/tour">
+              <Link to="/live">
                 <Calendar className="w-5 h-5 mr-2" />
                 View All Shows
               </Link>
@@ -379,56 +279,8 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Albums Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Discography</h2>
-            <p className="text-xl text-muted-foreground">Available on all streaming platforms</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {albums.map((album) => (
-              <Card key={album.id} className="overflow-hidden group hover:shadow-xl transition-all duration-300">
-                <div className="grid grid-cols-1 sm:grid-cols-2">
-                  <div className="relative">
-                    <img 
-                      src={album.coverArt} 
-                      alt={album.title}
-                      className="w-full aspect-square object-cover"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col justify-between">
-                    <div>
-                      <CardHeader className="p-0 mb-4">
-                        <CardTitle className="text-2xl">{album.title}</CardTitle>
-                        <CardDescription className="text-lg">{album.year}</CardDescription>
-                      </CardHeader>
-                      <p className="text-muted-foreground mb-6">{album.description}</p>
-                    </div>
-                    <div className="space-y-3">
-                      <div className="flex gap-2">
-                        <Button size="sm" variant="outline" className="flex-1">
-                          Spotify
-                        </Button>
-                        <Button size="sm" variant="outline" className="flex-1">
-                          Apple Music
-                        </Button>
-                      </div>
-                      <Button size="sm" variant="secondary" className="w-full">
-                        <Download className="w-4 h-4 mr-2" />
-                        Bandcamp
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
+{/* Hiddwn this section because there is nothing to sign up to yet, but we will use this in the future */}
+      {/* CTA Section
       <section className="py-20 bg-gradient-to-r from-red-600/10 via-yellow-400/10 to-green-500/10">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-4">Stay Connected</h2>
@@ -446,7 +298,8 @@ export default function Index() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
+
     </Layout>
   );
 }

@@ -24,8 +24,8 @@ export default function Bio() {
             <div className="lg:col-span-1 space-y-6">
               <Card className="overflow-hidden">
                 <div className="aspect-[3/4] bg-gradient-to-br from-red-600/20 to-green-500/20 flex items-center justify-center">
-                  <img 
-                    src="/placeholder.svg" 
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F76e39d6cb5b24501bed5149204e569f5%2F64d982209779459496826640eba7753c"
                     alt="Angus Digital portrait"
                     className="w-full h-full object-cover"
                   />
