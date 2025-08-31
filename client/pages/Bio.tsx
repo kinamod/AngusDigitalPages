@@ -11,7 +11,7 @@ export default function Bio() {
             Biography
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            The story behind Angus Digital - from Belgian streets to global dub frequencies
+            The story behind Angus Digital - from the UK streets to global dub frequencies
           </p>
         </div>
       </section>
