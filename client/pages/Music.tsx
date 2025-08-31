@@ -35,8 +35,7 @@ export default function Music() {
 
           {/* Featured Tracks */}
           <div className="mb-12">
-            <Card className="max-w-4xl mx-auto">
-              <CardContent>
+           
                 <div className="w-full">
               
                   <iframe 
@@ -49,8 +48,6 @@ export default function Music() {
 
                   </iframe>
                 </div>
-              </CardContent>
-            </Card>
           </div>
 
 
