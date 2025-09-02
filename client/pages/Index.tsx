@@ -78,14 +78,12 @@ export default function Index() {
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6">
-            <span
-              style={{
+            <span style={{
                 WebkitTextStroke: '1px white',
                 WebkitTextFillColor: 'black',
                 color: 'black',
-                fontFamily: 'Xirod, Bruno Ace SC, Verdana, sans-serif'
-              }}
-            >
+                fontFamily: 'Xirod, Audiowide, Verdana, sans-serif'
+              }}>
               Angus Digital
             </span>
           </h1>

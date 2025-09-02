@@ -26,7 +26,7 @@ export default function Navigation() {
                 // WebkitTextStroke: '1px white',
                 WebkitTextFillColor: 'white',
                 color: 'black',
-                fontFamily: 'Xirod, sans-serif'
+                fontFamily: 'Xirod, Audiowide, Verdana, sans-serif'
               }}>
               Angus Digital
             </span>
