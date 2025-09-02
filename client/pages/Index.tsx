@@ -83,7 +83,7 @@ export default function Index() {
                 WebkitTextStroke: '1px white',
                 WebkitTextFillColor: 'black',
                 color: 'black',
-                fontFamily: 'Xirod, sans-serif'
+                fontFamily: 'Xirod, Bruno Ace SC, Verdana, sans-serif'
               }}
             >
               Angus Digital
