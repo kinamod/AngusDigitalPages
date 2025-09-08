@@ -145,11 +145,11 @@ export default function Index() {
                   <br />
                 </p>
               </div>
-              <div className="mt-8">
+{/*               <div className="mt-8">
                 <Button asChild variant="outline" size="lg">
                   <Link to="/contact">Get In Touch</Link>
                 </Button>
-              </div>
+              </div> */}
             </div>
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-red-600/20 to-green-500/20 rounded-2xl flex items-center justify-center">
