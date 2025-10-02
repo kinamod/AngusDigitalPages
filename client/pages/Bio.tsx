@@ -224,7 +224,6 @@ export default function Bio() {
           </div>
         </div>
       </section>
-
     </Layout>
   );
 }
