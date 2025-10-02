@@ -154,7 +154,7 @@ export default function Index() {
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-red-600/20 to-green-500/20 rounded-2xl flex items-center justify-center">
                 <img 
-                  src="/placeholder.svg" 
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fe16f9ec5cc6d49d89abb0b1c7db20d4f%2Ffdb43cf613bb4677b41403028163f852" 
                   alt="Angus Digital"
                   className="w-full h-full object-cover rounded-2xl opacity-80"
                 />
