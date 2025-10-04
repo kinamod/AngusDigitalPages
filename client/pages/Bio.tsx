@@ -52,6 +52,16 @@ export default function Bio() {
                   />
                 </div>
               </Card>
+
+              <Card className="overflow-hidden">
+                <div className="aspect-[4/5] bg-gradient-to-br from-red-600/20 via-green-500/20 to-yellow-400/20 flex items-center justify-center">
+                  <img
+                    src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=960&q=80"
+                    alt="Angus Digital interacting with an enthusiastic crowd"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </Card>
             </div>
 
             {/* Biography Text */}
