@@ -34,16 +34,6 @@ export default function Bio() {
               </Card>
 
               <Card className="overflow-hidden">
-                <div className="aspect-video bg-gradient-to-br from-yellow-400/20 to-red-600/20 flex items-center justify-center">
-                  <img
-                    src="/placeholder.svg"
-                    alt="Angus Digital in studio"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </Card>
-
-              <Card className="overflow-hidden">
                 <div className="aspect-square bg-gradient-to-br from-green-500/20 to-yellow-400/20 flex items-center justify-center">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2Fe16f9ec5cc6d49d89abb0b1c7db20d4f%2F3bc3f2f8d3f84133bfedf6a673040be6"
@@ -56,7 +46,7 @@ export default function Bio() {
               <Card className="overflow-hidden">
                 <div className="aspect-[4/5] bg-gradient-to-br from-red-600/20 via-green-500/20 to-yellow-400/20 flex items-center justify-center">
                   <img
-                    src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=960&q=80"
+                    src="https://cdn.builder.io/api/v1/image/assets%2Fe16f9ec5cc6d49d89abb0b1c7db20d4f%2F13fee6bd2b884967808e37cd8c68c189"
                     alt="Angus Digital interacting with an enthusiastic crowd"
                     className="w-full h-full object-cover"
                   />
