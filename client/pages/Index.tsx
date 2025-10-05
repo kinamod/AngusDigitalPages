@@ -279,7 +279,10 @@ export default function Index() {
                           {show.event && (
                             <div className="text-lg font-bold text-primary mb-1">
                               {new Date(show.date) < new Date() ? (
-                                <p>{show.event} - Already Happened... You Missed it!</p>
+                                <p>
+                                  {show.event} - Already Happened... You Missed
+                                  it!
+                                </p>
                               ) : (
                                 show.event
                               )}

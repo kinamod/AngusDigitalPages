@@ -110,7 +110,11 @@ export default function Live() {
                     className="bg-gradient-to-r from-red-600 via-yellow-400 to-green-500 text-black"
                     asChild
                   >
-                    <a href={e.ticketLink} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={e.ticketLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <ExternalLink className="w-5 h-5 mr-2" />
                       <div className="text-black">Get Tickets</div>
                     </a>
@@ -143,8 +147,8 @@ export default function Live() {
               <p>Live Dates</p>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Catch Angus Digital live at these upcoming venues. Experience the full energy
-              of dub and reggae fusion in person.
+              Catch Angus Digital live at these upcoming venues. Experience the
+              full energy of dub and reggae fusion in person.
             </p>
           </div>
 
