@@ -278,7 +278,11 @@ export default function Index() {
                         <div className="flex-1">
                           {show.event && (
                             <div className="text-lg font-bold text-primary mb-1">
-                              {show.event}
+                              {new Date(show.date) < new Date() ? (
+                                <p>{show.event} - Already Happened... You Missed it!</p>
+                              ) : (
+                                show.event
+                              )}
                             </div>
                           )}
                           <h3 className="font-semibold text-lg">
@@ -301,24 +305,28 @@ export default function Index() {
                         )}
                       </div>
                     </div>
-                    <Button className="shrink-0" asChild>
-                      <a
-                        href={show.ticketLink}
-                        target={
-                          show.ticketLink.startsWith("http")
-                            ? "_blank"
-                            : undefined
-                        }
-                        rel={
-                          show.ticketLink.startsWith("http")
-                            ? "noopener noreferrer"
-                            : undefined
-                        }
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Get Tickets
-                      </a>
-                    </Button>
+                    {show.ticketLink &&
+                      show.ticketLink !== "#" &&
+                      new Date(show.date) >= new Date() && (
+                        <Button className="shrink-0" asChild>
+                          <a
+                            href={show.ticketLink}
+                            target={
+                              show.ticketLink.startsWith("http")
+                                ? "_blank"
+                                : undefined
+                            }
+                            rel={
+                              show.ticketLink.startsWith("http")
+                                ? "noopener noreferrer"
+                                : undefined
+                            }
+                          >
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            Get Tickets
+                          </a>
+                        </Button>
+                      )}
                   </div>
                 </CardContent>
               </Card>
